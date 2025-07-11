@@ -91,7 +91,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
 ## Documentação
 
-A documentação da API esta disponível [aqui](https://documenter.getpostman.com/view/15611768/2sA3s3GW7B).
+A documentação da API esta indisponível no momento.
 
 ## Contribuindo
 
