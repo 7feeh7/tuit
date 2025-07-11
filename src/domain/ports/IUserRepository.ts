@@ -1,3 +1,4 @@
+import { PaginationParams } from '@shared/interfaces/IPaginationParams'
 import { IUser } from '../entities/IUser'
 
 export interface IUserRepository {
@@ -11,4 +12,5 @@ export interface IUserRepository {
   getFollowers(userId: string): Promise<IUser[]>
   getFollowing(userId: string): Promise<IUser[]>
   getFollowingIds(userId: string): Promise<string[]>
+  findAllPaginated(params: PaginationParams): Promise<IUser[]>
 }

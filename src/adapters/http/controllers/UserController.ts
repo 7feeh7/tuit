@@ -33,7 +33,15 @@ export class UserController {
 
   async list(req: Request, res: Response) {
     try {
-      const users = await this.listUsersUseCase.execute()
+      const { search = '', page = 1, limit = 20 } = req.query
+
+      const params = {
+        search: String(search),
+        page: Number(page),
+        limit: Number(limit),
+      }
+
+      const users = await this.listUsersUseCase.execute(params)
       res.status(200).json(users)
     } catch (error: any) {
       res.status(500).json({ message: error.message })

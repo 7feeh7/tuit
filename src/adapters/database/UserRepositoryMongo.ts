@@ -136,4 +136,35 @@ export class UserRepositoryMongo implements IUserRepository {
       .find({ followerId: userId }, { followingId: 1, _id: 0 })
     return follows.map(f => f.followingId.toString())
   }
+
+  async findAllPaginated(params: { search: string, page: number, limit: number }): Promise<IUser[]> {
+    const { search = '', page = 1, limit = 20 } = params
+
+    const filter: any = {}
+
+    if (search) {
+      filter.$or = [
+        { username: { $regex: search, $options: 'i' } },
+        { displayName: { $regex: search, $options: 'i' } }
+      ]
+    }
+
+    const skip = (page - 1) * limit
+
+    const users = await UserModel.find(filter)
+      .skip(skip)
+      .limit(limit)
+
+    return users.map(user => ({
+      id: user._id.toString(),
+      username: user.username,
+      displayName: user.displayName,
+      avatarUrl: user.avatarUrl,
+      email: user.email,
+      phoneNumber: user.phoneNumber,
+      password: user.password,
+      createdAt: user.createdAt,
+      updatedAt: user.updatedAt,
+    }))
+  }
 }
