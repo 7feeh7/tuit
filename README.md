@@ -15,6 +15,8 @@ Inclui cache com Redis para timeline e banco de dados MongoDB para persistência
 
 Abaixo, um diagrama simplificado mostrando o uso do Redis como cache para timeline:
 
+<img width="814" height="667" alt="redis" src="https://github.com/user-attachments/assets/0f2be216-070e-43cf-8032-84c09bd28719" />
+
 ## Features
 
 - [x] Criar usuário
