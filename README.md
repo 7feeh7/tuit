@@ -106,4 +106,4 @@ Contribuições para o projeto são bem vindas! Pra contribuir com o projeto, si
 
 Para qualquer dúvida ou consulta, entre em contato com [F-softtech](mailto:felipe.pires.soaresti@gmail.com).
 
-Sinta-se à vontade para entrar em contato conosco se tiver algum comentário, sugestão ou se encontrar algum problema ao usar o save-income-backend. Sua opinião é valiosa para nós e nos ajuda a melhorar a aplicação.
+Sinta-se à vontade para entrar em contato conosco se tiver algum comentário, sugestão ou se encontrar algum problema ao usar o projeto. Sua opinião é valiosa para nós e nos ajuda a melhorar a aplicação.
